@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f1ff">
+    <title>QuoteVerse | Daily Inspiration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="app">
+        <header class="topbar">
+            <a href="#" class="logo">Quote<span>Verse.</span></a>
+
+            <button id="themeToggle" class="icon-btn"
+                    type="button" aria-label="Switch to dark mode">
+                <span id="themeIcon">🌙</span>
+            </button>
+        </header>
+
+        <main>
+            <section class="intro">
+                <p class="eyebrow">A LITTLE INSPIRATION, EVERY DAY</p>
+                <h1>Words that <span>move you.</span></h1>
+                <p class="subtitle">
+                    Find a thought that inspires your next chapter.
+                </p>
+            </section>
+
+            <section class="quote-card" aria-label="Quote of the moment">
+                <div class="card-top">
+                    <span class="quote-label">QUOTE OF THE MOMENT</span>
+                    <span class="quote-mark" aria-hidden="true">“</span>
+                </div>
+
+                <p id="quoteText" class="quote-text" aria-live="polite">
+                    Your next favorite quote is waiting for you.
+                </p>
+
+                <p id="quoteAuthor" class="quote-author">
+                    — QuoteVerse
+                </p>
+
+                <div class="card-divider"></div>
+
+                <div class="quote-actions">
+                    <button id="favoriteBtn" class="action-btn" type="button">
+                        ♡ <span id="favoriteLabel">Favorite</span>
+                    </button>
+
+                    <div class="right-actions">
+                        <button id="copyBtn" class="action-btn" type="button">
+                            ▢ Copy
+                        </button>
+                        <button id="shareBtn" class="action-btn" type="button">
+                            ↗ Share
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="controls" aria-label="Quote controls">
+                <div class="category-control">
+                    <label for="categorySelect">Explore by category</label>
+                    <select id="categorySelect">
+                        <option value="https://dummyjson.com/quotesall">All quotes</option>
+                        <option value="https://dummyjson.com/quotesmotivation">Motivation</option>
+                        <option value="https://dummyjson.com/quoteslife">Life</option>
+                        <option value="https://dummyjson.com/quotessuccess">Success</option>
+                        <option value="https://dummyjson.com/quoteswisdom">Wisdom</option>
+                        <option value="https://dummyjson.com/quoteshappiness">Happiness</option>
+                    </select>
+                </div>
+
+                <button id="generateBtn" class="generate-btn" type="button">
+                    <span aria-hidden="true">✦</span> New Quote
+                </button>
+            </section>
+
+            <p id="statusMessage" class="status-message"
+               role="status" aria-live="polite"></p>
+
+            <section class="favorites-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">YOUR PERSONAL COLLECTION</p>
+                        <h2>Favorite quotes <span id="favoriteCount">(0)</span></h2>
+                    </div>
+                </div>
+
+                <div id="favoritesList" class="favorites-list">
+                    <p class="empty-state">
+                        Your favorite quotes will appear here. Tap ♡ to save one.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            Made for your moments of inspiration ✨
+        </footer>
+    </div>
+</body>
+</html>
